@@ -24,4 +24,8 @@ RSpec.describe "StringCalculator" do
   it 'should handle the new line in the string' do
     expect(@calculator.add('1\n2,3')).to eq(6)
   end
+
+  it 'should support the different delimeters e.g. "//;\n1;2"' do
+    expect(@calculator.add('1\n2,3')).to eq(6)
+  end
 end
