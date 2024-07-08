@@ -20,4 +20,8 @@ RSpec.describe "StringCalculator" do
   it 'should pass any amount of numbers' do
     expect(@calculator.add('1,5,4,2')).to eq(12)
   end
+
+  it 'should handle the new line in the string' do
+    expect(@calculator.add('1\n2,3')).to eq(6)
+  end
 end
