@@ -28,4 +28,8 @@ RSpec.describe "StringCalculator" do
   it 'should support the different delimeters e.g. "//;\n1;2"' do
     expect(@calculator.add('1\n2,3')).to eq(6)
   end
+
+  it 'should raise exception if negative numbers' do
+    expect { @calculator.add('1\n8,-3,-4') }.to raise_error(RuntimeError)
+  end
 end
